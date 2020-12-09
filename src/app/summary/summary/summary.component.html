@@ -1,0 +1,9 @@
+<p>summary works!</p>
+
+<ng-container *ngIf="selectedItemsList$ | async as selectedItemsList">
+  <h4>{{ selectedItemsList.length }}</h4>
+  <ul>
+    <li *ngFor="let item of selectedItemsList">{{ item.label }}</li>
+  </ul>
+  <pre>{{ selectedItemsList | json }}</pre>
+</ng-container>
